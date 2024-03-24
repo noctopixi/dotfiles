@@ -1,0 +1,6 @@
+#!/bin/sh
+
+link=$(curl -F "file=@$1" 0x0.st)
+echo "$link"| xclip -selection c
+echo "$link"
+notify-send "Uploaded. Link copied to clipboard!"

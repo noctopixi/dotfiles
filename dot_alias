@@ -1,0 +1,35 @@
+ # Dotfile management
+alias conf='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias conft='conf ls-tree -t --name-only '
+
+# Hehehe
+alias pls="sudo -v; sudo "
+alias please="pls"
+
+# Convenient shell aliases
+alias cp="cp -iv" # ask before overwrite, verbose"
+alias mv="mv -iv" # ask before overwrite, verbose"
+alias rm="rm -v" # verbose"
+alias rmr="rm -rfv" # easier than typing rm -r!
+alias lt="ls -h -s -S -1" # ls in one column, show sizes, sort by largest, human readable
+alias du="du -h"
+alias dud="du -hs .[^.]* * | sort hr" # print directory sizes, include hidden files & dirs, human readable, descending
+alias df="df -h"
+alias when="stat -c %w"
+alias ka="killall -v"
+alias g="git"
+alias v="nvim"
+alias sv="sudo -v; sudo -E nvim "
+alias sha="shasum -a 256"
+alias untar="tar -xavf" # extract / auto detect format / verbose / this file ->
+alias l="eza -lh --color=always --group-directories-first"
+alias la="eza -lah --color=always --group-directories-first"
+alias find="fd"
+alias grep="rg"
+alias gt='git ls-tree -t --name-only '
+
+# Misc shell utilities
+alias clk="date +%r"
+alias myip="curl ipinfo.io/ip" 
+alias batt="cat /sys/class/power_supply/BAT0/capacity"
+
