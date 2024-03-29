@@ -100,6 +100,12 @@ local config = function()
 		on_attach = on_attach,
 	})
 
+	-- c
+	lspconfig.clangd.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+	})
+
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
 	local flake8 = require("efmls-configs.linters.flake8")
