@@ -11,13 +11,13 @@
 
 -- CATPPUCCIN
 -- local config = function()
---   require("catppuccin").setup({
---   integrations = {
---     ts_rainbow = true,
---     noice = true,
---   },
---   })
--- 		vim.cmd.colorscheme("catppuccin-macchiato")
+-- 	require("catppuccin").setup({
+-- 		integrations = {
+-- 			ts_rainbow = true,
+-- 			noice = true,
+-- 		},
+-- 	})
+-- 	vim.cmd.colorscheme("catppuccin-macchiato")
 -- end
 -- return {
 -- 	"catppuccin/nvim",
