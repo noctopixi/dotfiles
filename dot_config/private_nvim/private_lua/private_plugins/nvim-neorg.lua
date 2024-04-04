@@ -6,6 +6,13 @@ return {
 			["core.defaults"] = {},
 			["core.concealer"] = {},
 			["core.export"] = {},
+			["core.keybinds"] = {
+        config = {
+          hook = function(keybinds)
+          keybinds.map("all", "n", "<LocalLeader>ll", "<cmd>Neorg keybind all core.looking-glass.magnify-code-block<CR>")
+          end,
+        }
+      },
 			["core.dirman"] = {
 				config = {
 					workspaces = {
