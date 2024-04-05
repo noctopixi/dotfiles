@@ -1,6 +1,7 @@
  # Dotfile management
-alias conf='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias conft='conf ls-tree -t --name-only '
+# alias conf='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# alias conft='conf ls-tree -t --name-only '
+alias cz="chezmoi"
 
 # Hehehe
 alias pls="sudo -v; sudo "
