@@ -7,6 +7,7 @@ mapkey("<leader>ww", "w", "n")
 mapkey("<leader>qq", "q", "n")
 mapkey("<leader>qa", "qa", "n")
 mapkey("<leader>q!", "q!", "n")
+vim.api.nvim_set_keymap("n", "<C-a>", "ggVG", { noremap = false }) -- Select all
 
 -- Buffer Navigation
 mapkey("<leader>bn", "bnext", "n") -- Next buffer
