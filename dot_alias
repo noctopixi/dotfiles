@@ -34,3 +34,5 @@ alias clk="date +%r"
 alias myip="curl ipinfo.io/ip" 
 alias batt="cat /sys/class/power_supply/BAT0/capacity"
 
+# Media stuff
+alias makeogg='for f in *.(wav|flac|mp3|m4a|aac|wma)(N); do out="${f%.*}.ogg"; ffmpeg -i "$f" -vn -c:a libvorbis -qscale:a 5 -map_metadata 0 -n "$out"; done'
