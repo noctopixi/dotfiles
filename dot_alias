@@ -25,7 +25,6 @@ alias sha="shasum -a 256"
 alias untar="tar -xavf" # extract / auto detect format / verbose / this file ->
 alias l="eza -lh --color=always --group-directories-first"
 alias la="eza -lah --color=always --group-directories-first"
-alias find="fd"
 alias grep="rg"
 alias gt='git ls-tree -t --name-only '
 
@@ -35,4 +34,6 @@ alias myip="curl ipinfo.io/ip"
 alias batt="cat /sys/class/power_supply/BAT0/capacity"
 
 # Media stuff
-alias makeogg='for f in *.(wav|flac|mp3|m4a|aac|wma)(N); do out="${f%.*}.ogg"; ffmpeg -i "$f" -vn -c:a libvorbis -qscale:a 5 -map_metadata 0 -n "$out"; done'
+alias regen="python3 ~/.local/bin/regen.py"
+# (below alias is deprecated in favor of the script in .zshrc)
+# alias makeogg='for f in *.(opus|wav|flac|m4a|aac|wma|alac)(N); do out="${f%.*}.ogg"; ffmpeg -i "$f" -map 0:a -c:a libvorbis -q:a 6 -map "0:v?" -c:v libtheora -q:v 10 -disposition:v attached_pic -y "$out"; done'

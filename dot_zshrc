@@ -109,3 +109,4 @@ backward-delete-char() {
   zle .$WIDGET && (( enough_chars ))
 }
 zle -N backward-delete-char
+
