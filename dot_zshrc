@@ -110,3 +110,19 @@ backward-delete-char() {
 }
 zle -N backward-delete-char
 
+# Traverse a given folder recursively and create an OGG Vorbis copy of it.
+# It should only be used for lossless audio and OPUS. Converting an MP3 to Opus is pointless.
+function makeogg {
+  local src="$1"
+  local parent="$(dirname "$src")"
+  local base="$(basename "$src")"
+  local dest="$parent/${base}_OGG"
+  find "$src" -type f \( -iname "*.flac" -o -iname "*.wav" -o -iname "*.opus" -o -iname "*.mp3" -iname "*.m4a" -o -iname "*.aac" -o -iname "*.alac" -o -iname "*.wma" \) -print0 | while IFS= read -r -d '' f; do
+    local relpath="${f#$src/}"
+    local out="$dest/${relpath%.*}.ogg"
+    mkdir -p "$(dirname "$out")"
+    echo "🎧 Converting: $f"
+    ffmpeg -i "$f" -map 0:a -c:a libvorbis -q:a 6 -map "0:v?" -c:v libtheora -q:v 10 -disposition:v attached_pic -y "$out" -loglevel error </dev/null
+  done
+  echo "🌷 Music ready on: $dest"
+}
