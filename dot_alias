@@ -37,3 +37,6 @@ alias batt="cat /sys/class/power_supply/BAT0/capacity"
 alias regen="python3 ~/.local/bin/regen.py"
 # (below alias is deprecated in favor of the script in .zshrc)
 # alias makeogg='for f in *.(opus|wav|flac|m4a|aac|wma|alac)(N); do out="${f%.*}.ogg"; ffmpeg -i "$f" -map 0:a -c:a libvorbis -q:a 6 -map "0:v?" -c:v libtheora -q:v 10 -disposition:v attached_pic -y "$out"; done'
+
+# Functional aliases
+alias emacs="emacsclient -c -a 'emacs'"

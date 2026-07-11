@@ -92,6 +92,7 @@ def main():
     print(f"🧾 Files converted: {converted_count}")
     print(f"🧾 Files copied:    {copied_count}")
     print(f"🫥 Files already up to date: {skipped_count}")
+    print(f"")
 
 if __name__ == "__main__":
     main()
