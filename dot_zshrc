@@ -126,3 +126,7 @@ function makeogg {
   done
   echo "🌷 Music ready on: $dest"
 }
+
+. "$HOME/.local/share/../bin/env"
+
+fortune wisdom -s | cowsay -f flaming-sheep | lolcat --freq 0.8 --spread 8
