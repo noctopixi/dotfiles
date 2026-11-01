@@ -127,6 +127,17 @@ function makeogg {
   echo "🌷 Music ready on: $dest"
 }
 
+# More sourcing
 . "$HOME/.local/share/../bin/env"
 
+# User-local command-line tools
+export PATH="$HOME/.local/bin:$PATH"
+
 fortune wisdom -s | cowsay -f flaming-sheep | lolcat --freq 0.8 --spread 8
+
+# Redacting my username
+redact() {
+  sed -E -e "s/\b${USER}\b/USER/g" \
+         -e "s|/home/[^/ ]+|/home/USER|g" \
+         -e "s/\b$(hostname)\b/HOST/g"
+}
