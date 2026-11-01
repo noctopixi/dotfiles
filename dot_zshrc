@@ -128,7 +128,7 @@ function makeogg {
 }
 
 # More sourcing
-. "$HOME/.local/share/../bin/env"
+# . "$HOME/.local/share/../bin/env"
 
 # User-local command-line tools
 export PATH="$HOME/.local/bin:$PATH"
